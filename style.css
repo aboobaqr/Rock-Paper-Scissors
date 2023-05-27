@@ -24,12 +24,17 @@ img {
 
 p {
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     background: #333;
     color: #f4f4f4;
     border-radius: 5px;
-    font-size: 24px;
+    font-size: 20px;
 }
+
+a {
+    cursor: pointer;
+}
+
 
 /* Utilities */
 .container {
@@ -43,9 +48,21 @@ p {
 .btn {
     width: 150px;
     padding: 10px;
-    margin-top:35px;
+    margin-top:30px;
     background: #f4f4f4;
     cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.player-moves a {
+    border: solid 3px #333;
+    border-radius: 50%;
+}
+
+.player-moves .active {
+    border: double 5px #999;
+    border-radius: 50%;
 }
 
 
@@ -68,7 +85,7 @@ p {
 
 .player-moves {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .player-moves img {
@@ -84,4 +101,29 @@ p {
     width: 100px;
     text-align: center;
     margin: 5px;
+}
+
+
+@media screen and (max-width: 740px) {
+    .container {
+        margin-top: 20px;
+    }
+
+    p {
+        font-size: 17px;
+        padding: 3px;
+    }
+
+    img {
+        height: 4rem;
+    }
+
+    .player-moves img {
+        height: 2rem;
+
+    }
+
+    h2 {
+        font-size: 24px;
+    }
 }

@@ -43,6 +43,9 @@ const generateAndDisplay = function () {
 rockBtn.addEventListener('click', function () {
   generateAndDisplay();
   playerDisplay.src = './img/rock-emoji.png';
+  rockBtn.classList.add('active');
+  paperBtn.classList.remove('active');
+  scissorsBtn.classList.remove('active');
   // Comparing computer and player moves
 
   if (computerMove === 'rock') {
@@ -67,14 +70,14 @@ rockBtn.addEventListener('click', function () {
     playerScore += 1;
     document.querySelector('.player-score').textContent = playerScore;
   }
-
-  console.log(computerMove);
-  console.log(playerScore);
 });
 
 paperBtn.addEventListener('click', function () {
   generateAndDisplay();
   playerDisplay.src = './img/paper-emoji.png';
+  rockBtn.classList.remove('active');
+  paperBtn.classList.add('active');
+  scissorsBtn.classList.remove('active');
 
   if (computerMove === 'rock') {
     result = 'You won!';
@@ -98,14 +101,14 @@ paperBtn.addEventListener('click', function () {
     compScore += 1;
     document.querySelector('.computer-score').textContent = compScore;
   }
-
-  console.log(computerMove);
-  console.log(playerScore);
 });
 
 scissorsBtn.addEventListener('click', function () {
   generateAndDisplay();
   playerDisplay.src = './img/scissors-emoji.png';
+  rockBtn.classList.remove('active');
+  paperBtn.classList.remove('active');
+  scissorsBtn.classList.add('active');
 
   if (computerMove === 'rock') {
     result = 'You lost!';
@@ -127,11 +130,8 @@ scissorsBtn.addEventListener('click', function () {
       '.message'
     ).textContent = `You picked scissors, computer picked ${computerMove}. ${result}`;
     tie += 1;
-    document.querySelector('.player-score').textContent = tie;
+    document.querySelector('.tie').textContent = tie;
   }
-
-  console.log(computerMove);
-  console.log(playerScore);
 });
 
 resetBtn.addEventListener('click', function () {
@@ -146,4 +146,8 @@ resetBtn.addEventListener('click', function () {
   document.querySelector('.tie').textContent = tie;
   document.querySelector('.player-score').textContent = playerScore;
   document.querySelector('.computer-score').textContent = compScore;
+
+  rockBtn.classList.remove('active');
+  paperBtn.classList.remove('active');
+  scissorsBtn.classList.remove('active');
 });
