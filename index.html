@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game On | Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Rock Paper Scissors</h2>
+
+      <!-- Move Displayed -->
+      <div>
+        <h1 class="intro">Wanna Play? Pick a move!</h1>
+      </div>
+      <div class="displayed-move hidden">
+        <div>
+          <img class="player-display" src="./img/paper-emoji.png"  alt="player" />
+          <p>You</p>
+        </div>
+        <div>
+          <img src="./img/scissors-emoji.png" class="comp-display" alt="computer" />
+          <p>Computer</p>
+        </div>
+    </div>
+    <p class="message hidden">You picked Scissors, computer picked rock. You lose!</p>
+
+      <!-- Scores -->
+
+    <div class="scores">
+        <div class="player-s">
+            <p class="player-label">Score: <span class="player-score">0</span></p>
+        </div>
+          <p class="player-label">Ties: <span class="tie">0</span></p>
+          <div class="computer-s">
+            <p class="computer-label">Computer: <span class="computer-score">0</span></p>
+        </div>
+    </div>
+
+      <!-- Player moves -->
+      <div class="player-moves">
+        <a href="#" class="rock"><img src="./img/rock-emoji.png" alt="rock" /></a>
+        <a href="#" class="paper"><img src="./img/paper-emoji.png" alt="paper" /></a>
+        <a href="#" class="scissors"><img src="./img/scissors-emoji.png" alt="scissors" /></a>
+      </div>
+
+      <button class="btn reset-btn">Reset Score</button>
+    </div>
+
+    <p class="footer">&copy; Baqr</p>
+    <script src="script.js"></script>
+  </body>
+</html>
